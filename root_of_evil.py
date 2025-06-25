@@ -4,14 +4,17 @@ def sqr(num):
     :param num: int of number
     :return: sqrt of the num
     """
-    try:
-        num ** 0.5
-    except TypeError:
-        print("not expects not digit input")
+    is_num = False
+    for i in range(10):
+        if num == i or num == (i*-1):
+            is_num = True
+    if not is_num:
+        raise TypeError("not expects not digit input")
     else:
         if num < 0:
             raise ValueError("not expects negative int")
-        return num ** 0.5
+        else:
+            return num ** 0.5
 
 
 def main():
