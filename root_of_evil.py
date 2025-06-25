@@ -18,6 +18,6 @@ def sqr(num):
 
 
 def main():
-    print(sqr(-9))
+    print(sqr(-8))
 if __name__ == "__main__":
     main()
