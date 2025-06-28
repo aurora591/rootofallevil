@@ -4,11 +4,8 @@ def sqr(num):
     :param num: int of number
     :return: sqrt of the num
     """
-    is_num = False
-    for i in range(10):
-        if num == i or num == (i*-1):
-            is_num = True
-    if not is_num:
+    abs_num = str(num).replace("-", "")
+    if not abs_num.isdigit():
         raise TypeError("not expects not digit input")
     else:
         if num < 0:
@@ -18,6 +15,6 @@ def sqr(num):
 
 
 def main():
-    print(sqr(-8))
+    print(sqr(36))
 if __name__ == "__main__":
     main()
